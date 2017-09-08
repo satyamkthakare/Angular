@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/userController.js"></script>
+</head>
+<body>
+<div>
+    10+20 = {{10+20}}
+</div>
+<!--<div ng-init="myText='new value set by init method'; val1=123; val2=366">
+    {{{name:'David', age:'30'}.name}}<br/>
+    1==2 {{1===2}}<br/>
+    2==2 {{2===2}} <br/>
+    {{myText}}<br/>
+    {{val1+val2}}<br/>
+
+</div>-->
+<div ng-controller="myController">
+    <h2>{{massege}}</h2>
+    {{employeesList[0].firstName + " "+ employeesList[0].lastName}}
+    <table>
+        <tbody>
+        <tr ng-repeat="emp in employeesList | limitTo: 5">
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+
+            <td ng-repeat="sub in emp.subjects | orderBy: 'java' ">
+                <table>
+                <tr>
+                    <td>{{sub.subject}}</td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h2>Two way binding</h2>
+    <form>
+        First name <input type="tex" ng-model="employeesList[0].firstName" /><br/>
+        Last Name <input type="tex" ng-model="employeesList[0].lastName"/><br/>
+    </form>
+</div>
+
+</body>
+</html>

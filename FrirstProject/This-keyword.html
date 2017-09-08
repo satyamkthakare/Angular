@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person = function(firstname){
+            this.firstName = firstname;
+            //document.write('<br> Person insrantiated' + this.valueOf());
+        };
+
+        var person1 = new person("Alice");
+        var person2 = new person("Bob");
+        person.prototype.lastname = "Dadasd";
+
+        document.write("<br/> Person1 is " + person1.firstName + " " + person1.lastname);
+        document.write("<br/> Person1 is " + person2.firstName);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

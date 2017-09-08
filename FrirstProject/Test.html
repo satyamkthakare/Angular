@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+        function calculate (){
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+
+            result.value = num1 + num2;
+        }
+
+        //Simple Function
+        function SimpleFunc(num1, num2){
+            var result = num1 + num2;
+            return result;
+        }
+
+        var passvalue = SimpleFunc(12, 15);
+        document.write("Simple Function <br/>" + passvalue + "<br/>");
+
+        //anonymous Function
+
+        var add = function(num1, num2){
+            var result = num1 + num2;
+            return result;
+        }
+
+        var passvalue1 = add(42, 15);
+        document.write("Anonymous Function <br/>" + passvalue1 + "<br/>");
+
+        //Name Function
+        var fact = function computeFact (num){
+            if(num <=1){
+                return 1;
+            }
+            return num*computeFact(num-1);
+        }
+
+        var factResult = fact(5);
+        document.write("Name Function <br/>" + factResult + "<br/>");
+
+        //IIFE - immediately Invoked Function Expression
+        var fact2 = function conpFact(number){
+            if(number<=1){
+                return 1;
+            }
+            return number*conpFact(number-1);
+        }(5);
+
+        document.write(fact2);
+
+
+    </script>
+</head>
+<form><br/>
+    Number 1 : <input type="text" name="number1" id="num1"/><br/><br/>
+    Number 2:  <input type="text" name="number2" id="num2"/><br/><br/>
+    Result : <input type="text" readonly id="result"><br/>
+    <input type="button" value="Calculate" onclick="calculate()"/>
+</form>
+
+<body>
+
+</body>
+</html>

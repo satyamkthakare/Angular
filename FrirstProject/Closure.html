@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function addNumbers(firstnumber,  secondNumber) {
+            var returnValue = "Result is : ";
+
+            //Inner Function
+            function add() {
+                return returnValue + (firstnumber + secondNumber);
+            }
+
+            return add();
+        }
+
+        var result = addNumbers(10, 20);
+        document.write(result);
+
+        //closure
+         var incrementClickCount = (function () {
+             var clickCount = 0;
+             return function () {
+                 return ++clickCount;
+             }
+         })();
+    </script>
+</head>
+<body>
+<input type="button" value="Click Me" onclick="alert(incrementClickCount());"/>
+</body>
+</html>

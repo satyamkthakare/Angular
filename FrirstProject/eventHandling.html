@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <!--<script src="scripts/eventController.js"></script>-->
+    <script src="scripts/userController.js"></script>
+</head>
+<body>
+
+<!--<div ng-controller="eventController">
+    <h2>{{massege}}</h2>
+    {{technologiesList[0].tech + " "+ technologiesList[0].likes}}
+    <table>
+        <tbody>
+        <tr ng-repeat="tech in technologiesList">
+            <td>{{tech.tech}}</td>
+            <td>{{tech.likes}}</td>
+            <td>{{tech.dislikes}}</td>
+            <td><input type="button" value="Likes" ng-click="incrementLikesCount(tech)"></td>
+            <td><input type="button" value="Dislikes" ng-click="incrementDislikeCount(tech)"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>-->
+
+<div ng-controller="userController">
+    <table>
+        <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td><img ng-src="{{user.avatar}}"/> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

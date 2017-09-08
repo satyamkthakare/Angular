@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //Addition
+        var add = function (a, b) {
+            return a + b;
+        }
+
+        //mul
+        var mul = function (a, b) {
+            return a*b;
+        }
+
+        var calc = function (num1, num2, callback) {
+            return callback(num1, num2);
+        }
+
+        document.write(calc(40, 10, add) + "<br/>");
+        document.write(calc(40, 10, mul));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
